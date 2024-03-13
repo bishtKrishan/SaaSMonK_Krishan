@@ -1,0 +1,37 @@
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,Project Name ,MOVIECRITIC,,,,,,,
+,Priority ,High,,,,,,,
+,Description ,Test Case Documents,,,,,,,
+,Devices,Window/MAC/Android/iOS,,,,,,,
+,,,,,,,,,
+,Test Case ID,Test Description,Test Steps,Expected Results ,Actual Results/Bugs,Execution Status ,Severity,Screenshot,Notes
+,T001,Verify display of movies on Home Page,"1. Navigate to the Home Page. 
+2. Check if all movies are displayed.                 
+3. Enter search query and click search button",All movies are displayed on the Home Page and search functionality filters movies as expected,,Pass,,,
+,T002,Verify movie card click functionality,"1. Click on a movie card
+ 2. Check if the movie review page is loaded",Movie review page for the selected movie is displayed,,Pass,,,
+,T003,Verify addition of new movie,"1. Navigate to the movie addition page 
+2. Enter details for a new movie 
+ 3. Submit form",New movie is added to the movie list and displayed on the Home Page,,Pass,,,
+,T004,Verify editing of existing movie,"1. Navigate to the movie edit page 
+2. Edit details of an existing movie 
+3. Submit form",Updated movie details are reflected in the movie list and displayed on the Home Page,,Pass,,,
+,T005,Verify deletion of movie and associated reviews,"1. Navigate to the movie deletion page 
+ 2. Select a movie to delete
+ 3. Confirm deletion",Selected movie is deleted from the movie list and associated reviews are also deleted,,Pass,,,
+,T006,Verify calculation of average rating,"1. Select a movie 
+2. Fetch all associated reviews
+ 3. Calculate average rating",Average rating for the selected movie is calculated correctly,"1. Rating given is 3/10 but Overall is displaying 4/10, which is incorrect
+2. When multiple rating are given, and any one rating is deleted, then Overall Rating is still displaying the old one(should get recalculated and updated)",Fail,High,https://app.screenclip.com/Z9Cd,
+,T007,Verify all Action buttons should clickable,"1. Navigate to every page in the website
+2. Click and check the response of each button on UI of page and also on Network/Console to check respond",Every Buttons are working as expected,Click on 'Follow us on instagram' link on bottom of page is redirecting to Google.,Fail,Medium,,
+,T008,Verify loading UI should display evrywhere untill data is not displaying after page load,"1. Navigate to every page of website 
+2. Check if untill data display a loader UI should display instead of blank page",A loader should display instead of blank page,"In main home page, Review page for few seconds tha page remain blank",Fail,Low,https://app.screenclip.com/BLCJ,
+,T009,Verify error validation on all Fields where data is entered by user,"1. Click on Add New Movie.
+2. Enter Moview Name but don't fill Release Date and click on Create Movie","Should display error if user saving without Release date or Movie Name.
+Should display error while updating Movie name as blank or Date as blank",User able to save but no data is displaying when creating/updating movie without Relase date or Movie Name on Home page,Fail,Low,,
+,T010,Verify Page UI is displaying correctly ,1. Navigate to Movie Review page where only 1 user has given review.,Footer of page should always display at bottom,Footer of page is displaying at center,Fail,Medium,https://app.screenclip.com/T7e9,
+,T011,Verify confirmation popup before deleting any movie or review,"1. Click on Delete button in Movie or review
+",A Confirmation popup must display because this action can't be reverted,No Confirmation popup display,Fail,Medium,,
